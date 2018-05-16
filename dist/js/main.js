@@ -12,7 +12,7 @@ $(document).ready(function(){
             });
             
             $(window).on('load scroll',function(){ 
-                if ($(this).scrollTop() >= '150') {
+                if ($(this).scrollTop() >= '200') {
                     $('#toTop').addClass("toTopShow");
                 }
                 else  {$('#toTop').removeClass("toTopShow");}

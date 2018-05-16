@@ -124,6 +124,14 @@ main img {
 	background-color: rgba(232, 81, 74, 0.88);
 }
 
+.comandFirst h4,
+.comandSecond h4,
+.comandThird h4 {
+	font-weight: 300;
+	text-align: right;
+	margin-right: 15px;
+}
+
 .comandSecond {
 	background-color: #9e9e9e;
 }
