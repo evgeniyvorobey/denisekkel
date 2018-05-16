@@ -111,10 +111,12 @@ main h1{
 }
 .abutdenis{
     font-size: 19px;
-    border-top: 1px solid rgba(232, 81, 74, 0.2);
-    padding: 5px;
+    border-top:2px solid rgba(232, 81, 74, 0.88);
+    padding: 25px 10px;
     margin: 35px 20px;
+    z-index: 2;
 }
+
 main img{
     width: 100%;
     height: auto;
@@ -129,9 +131,15 @@ main img{
     border-bottom: 2px solid rgba(232, 81, 74, 0.88);
 }
 .comandFirst{
-    // width: 100%;
+    background-color: rgba(232, 81, 74, 0.88);
 }
-.comandFirst img{
+.comandSecond{
+    background-color: rgb(158, 158, 158);
+}
+.comandThird{
+    background-color: rgb(246, 210, 143);
+}
+.comandImg{
     border-bottom: 2px solid rgba(232, 81, 74, 0.88);
     margin: 0 auto;
     width: 80%;
@@ -141,12 +149,13 @@ ul, li{
     padding: 0;
 }
 ul{
-    background: rgb(235, 235, 235);
+    background: rgba(235, 235, 235, 0.521);
     width: 90%;
     margin: 20px;
     padding: 20px;
     box-sizing: border-box;
     border-right: 2px solid rgba(232, 81, 74, 0.88);
+    border-bottom: 2px solid rgba(232, 81, 74, 0.88);
 }
 
 
