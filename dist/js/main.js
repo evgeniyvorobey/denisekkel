@@ -3,19 +3,31 @@ $(document).ready(function(){
         event.preventDefault();
         var id  = $(this).attr('href'),
         top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1100);
+        $('body,html').animate({scrollTop: top}, 200);
     });
     (function($) {
         $(function(){
             $('.icon, #close').on('click', function(){
                 $(this).closest('.menu').toggleClass('menu-open');
             });
+
+            $('.comandFirst', 'body').on('click',function(){
+                $('#comandFirstAbout').toggleClass('comandAboutVisible');
+            });
+
+            $('.comandSecond').on('click',function(){
+                $('#comandSecondAbout').toggleClass('comandAboutVisible');
+            });
             
+            $('.comandThird').on('click',function(){
+                $('#comandThirdAbout').toggleClass('comandAboutVisible');
+            });
+
             $(window).on('load scroll',function(){ 
                 if ($(this).scrollTop() >= '200') {
-                    $('#toTop').addClass("toTopShow");
+                    $('#square').addClass("toTopShow");
                 }
-                else  {$('#toTop').removeClass("toTopShow");}
+                else  {$('#square').removeClass("toTopShow");}
             });
         });
     })(jQuery);
@@ -33,8 +45,6 @@ $(window).scroll(function() {
         $('#comandTitle').addClass("comandTitleMove")
     } else {$('#comandTitle').removeClass("comandTitleMove");}
 });
-
-
 //------parallax
 // jQuery(document).ready(function(){
 //     $(window).scroll(function(e){

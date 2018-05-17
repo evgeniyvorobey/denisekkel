@@ -14,11 +14,11 @@
     transition: .25s ease-in-out;
 }
 .menu-item:hover {
-    border-bottom: 2px solid rgba(232, 81, 74, 0.88);
+    border-bottom: 2px solid rgba(40, 90, 97, 0.83);
 }
 .icon{
-    top: 5px;
-    right: 5px;
+    top: 15px;
+    right: 15px;
     display: none;
     width: 35px;
     height: 35px;
@@ -32,7 +32,7 @@
     position: absolute;
     height: 3px;
     width: 100%;
-    background: rgb(232, 81, 74);
+    background: rgba(40, 90, 97, 0.83);
     left: 0;
     transform: rotate(0deg);
     transition: .25s ease-in-out;
@@ -58,7 +58,7 @@
         right: 0;
         left: 0;
         margin-top: 52px;
-        background-color: rgba(232, 81, 74, 0.88);
+        background-color: rgba(40, 90, 97, 0.83);
         z-index: 1000;
         overflow: auto;
         transition: 1s ease-in-out;
@@ -104,24 +104,36 @@ body{
     width: 100%;;
     font-family: Arial, Helvetica, sans-serif;
 }
-main h1{
+main{
+    position: relative;
+    top: 285px;
+}
+.mainTitle{
+    position: relative;
+    top: -150px;
+}
+.mainTitle h1{
     text-align: center;
 }
 .h1teg{
+    position: relative;
+
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 100;
 }
 .abutdenis{
     font-size: 19px;
-    border-top:2px solid rgba(232, 81, 74, 0.88);
     padding: 25px 10px;
     margin: 35px 20px;
     z-index: 2;
 }
 
-main img{
-    width: 100%;
+.mainPhoto{
+    display: block;
+    width: 80%;
     height: auto;
+    margin: 0 auto;
 }
 .comand{
     overflow: hidden;
@@ -130,48 +142,53 @@ main img{
     position: relative;
     left: -100%;
     font-size: 22px;
-    width: 150px;
+    font-weight: 100;
+    width: 90px;
     margin: 30px auto;
     padding: 10px 20px;
-    border-bottom: 2px solid rgba(232, 81, 74, 0.88);
-    transition: .3s ease-in-out;
+    border-bottom: 2px solid rgba(40, 90, 97, 0.83);
+    transition: .1s ease-in-out;
 }
 #comandTitle.comandTitleMove{
     left: 0;
 }
-.comandFirst{
-    background-color: rgba(232, 81, 74, 0.88);
-}
 .comandFirst h4, .comandSecond h4, .comandThird h4{
     font-weight: 300;
-    text-align: right;
-    margin-right: 15px;
+    text-align: center;
 }
-.comandSecond{
-    background-color: rgb(158, 158, 158);
-}
-.comandThird{
-    background-color: rgb(246, 210, 143);
+.comandSecond, .comandFirst, .comandThird{
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    margin:  0 auto;
 }
 .comandImg{
-    border-bottom: 2px solid rgba(232, 81, 74, 0.88);
-    margin: 0 auto;
-    width: 80%;
+    width: 100%;
+    height: auto;
+}
+#comandFirstAbout, #comandSecondAbout, #comandThirdAbout{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.459);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: .1s ease-in-out;
+    opacity: 0;
+}
+#comandFirstAbout.comandAboutVisible, #comandSecondAbout.comandAboutVisible,
+#comandThirdAbout.comandAboutVisible{
+    opacity: 1;
 }
 ul, li{
     list-style: none;
-    padding: 0;
+    padding: 0 0 0 15px;
+    margin: 0;
 }
-.aboutComand{
-    background: rgba(235, 235, 235, 0.521);
-    width: 90%;
-    margin: 20px 20px 0 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    border-right: 2px solid rgba(232, 81, 74, 0.88);
-    border-bottom: 2px solid rgba(232, 81, 74, 0.88);
-    transition: .25s ease-in-out;
+#comand li{
+    text-align: center;
+    padding: 10px;
 }
+
 
 
 
@@ -181,28 +198,31 @@ ul, li{
 
 #toTop{
     position: fixed;
-    bottom: 50px;
+    bottom: 15px;
     right: -100px;
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(232, 81, 74, 0.88);
-    border-radius: 25px;
+    // border: 3px solid rgba(232, 81, 74, 0.88);
     opacity: 0;
     transition: 0.3s ease;
 }
-#toTop.toTopShow{
-    opacity: 1; 
-    right: 30px; 
-}
-.square{
-    position: absolute;
-    left: 11px;
-    top: 15px;
-    width: 15px;
-    height: 15px;
-    border-top: 2px solid rgba(232, 81, 74, 0.88);
-    border-left: 2px solid rgba(232, 81, 74, 0.88);
+
+#square{
+    opacity: 0;
+    position: fixed;
+    right: -115px;
+    bottom: 15px;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid rgba(40, 90, 97, 0.83);
+    border-left: 2px solid rgba(40, 90, 97, 0.83);
     transform: rotate(45deg);
+    transition: 0.3s ease;
+
+}
+#square.toTopShow{
+    opacity: 1; 
+    right: 15px; 
 }
 
 //---------------ToTop end--------
