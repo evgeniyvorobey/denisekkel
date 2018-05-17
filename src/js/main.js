@@ -21,6 +21,17 @@ $(document).ready(function(){
     })(jQuery);
 });
 
+let comandTitle = $('#comandTitle').offset().top;
+let windowHeight = window.outerHeight
+let x = (comandTitle - windowHeight)
+console.log(x)
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > (x+250) ) {
+        $('#comandTitle').addClass("comandTitleMove")
+    } else {$('#comandTitle').removeClass("comandTitleMove");}
+});
+
 
 //------parallax
 // jQuery(document).ready(function(){
@@ -30,6 +41,6 @@ $(document).ready(function(){
 
 //     function parallaxScroll(){
 //         var scrolled = $(window).scrollTop();
-//         $('#parallax-4').css('top',(0+(scrolled*.25))+'px');
+//         $('#parallax').css('top',(0+(scrolled*.25))+'px');
 //     }
 // }); 
