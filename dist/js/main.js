@@ -22,12 +22,14 @@ $(document).ready(function(){
 });
 
 let comandTitle = $('#comandTitle').offset().top;
-let windowHeight = window.outerHeight
-let x = (comandTitle - windowHeight)
-console.log(x)
+let windowHeight = window.innerHeight;
+// let x = (comandTitle - windowHeight)
+console.log(`До элемента ${comandTitle}`) 
+console.log(`Длина страници ${windowHeight}`)
+console.log(`Показать ${windowHeight - 100}`)
 
 $(window).scroll(function() {
-    if ($(this).scrollTop() > (x+250) ) {
+    if ($(this).scrollTop() > windowHeight ) {
         $('#comandTitle').addClass("comandTitleMove")
     } else {$('#comandTitle').removeClass("comandTitleMove");}
 });
