@@ -138,19 +138,20 @@ main{
 .comand{
     overflow: hidden;
 }
-#comandTitle, #galaryTitle, #priceTitle{
+#comandTitle, #galaryTitle, #priceTitle, #educationTitle{
     position: relative;
     opacity: 0;
     font-size: 20px;
     font-weight: 100;
     width: 140px;
-    margin: 30px auto;
+    margin:10px auto;
     text-align: center;
-    padding: 10px 20px;
+    padding: 30px 20px;
     border-bottom: 2px solid rgba(40, 90, 97, 0.83);
     transition: .5s ease-in-out;
 }
-#comandTitle.titleMove, #galaryTitle.titleMove, #priceTitle.titleMove{
+#comandTitle.titleMove, #galaryTitle.titleMove, #priceTitle.titleMove,
+#educationTitle.titleMove{
     opacity: 1;
 }
 .comandFirst h4, .comandSecond h4, .comandThird h4{
@@ -169,6 +170,9 @@ main{
 }
 #comandFirstAbout, #comandSecondAbout, #comandThirdAbout{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.459);
     width: 100%;
     height: 100%;
@@ -218,12 +222,12 @@ ul, li{
 
 
 //-----------Price----------------//
-.priceSection{
+.price{
     width: 80%;
     margin: 0 auto;
 }
-.priceSectionTitle{
-
+.priceSection{
+    width: 100%;
 }
 th{
     font-weight: 100;
@@ -233,9 +237,38 @@ th{
 tr th:nth-child(2){
     text-align: right;
 }
+.buttonContainer{
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+}
+.buttonContainer button{
+    width: 150px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.83);
+    border: 0px;
+    border-bottom: 1px solid;
+}
+.buttonContainer button:hover{
+    color: #fff;
+    background-color: rgba(40, 90, 97, 0.83);
+    transition: .15s ease-in-out;
+}
 
-
-
+//---------education--------//
+.education{
+    width: 80%;
+    margin: 0 auto;
+}
+.education img{
+    width: 100%;
+    height: auto;
+}
+.eduFirst h3{
+    font-size: 19px;
+    font-weight: 100;
+    padding: 25px 0;
+}
 
 
 

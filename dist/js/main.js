@@ -14,7 +14,7 @@ $(document).ready(function(){
                 $(this).closest('.menu').toggleClass('menu-open');
             });
 
-            $('.comandFirst', '#body').on('click',function(){
+            $('.comandFirst').on('click',function(){
                 $('#comandFirstAbout').toggleClass('comandAboutVisible');
             });
 
@@ -61,9 +61,17 @@ $(window).scroll(function() {
 
 //--------------Прайс-----------//
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 2950 ) {
+    if ($(this).scrollTop() > 3000 ) {
         $('#priceTitle').addClass("titleMove")
     } else {$('#priceTitle').removeClass("titleMove");}
+});
+
+
+//--------------Обучение----------//
+$(window).scroll(function() {
+    if($(this).scrollTop() > 3750 ) {
+        $('#educationTitle').addClass("titleMove")
+    } else {$('#educationTitle').removeClass("titleMove");}
 });
 //------parallax
 // jQuery(document).ready(function(){
