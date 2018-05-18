@@ -1,3 +1,6 @@
+autoSlider();
+
+
 $(document).ready(function(){
     $("#menu, #toTop").on("click","a", function (event) {
         event.preventDefault();
@@ -11,7 +14,7 @@ $(document).ready(function(){
                 $(this).closest('.menu').toggleClass('menu-open');
             });
 
-            $('.comandFirst', 'body').on('click',function(){
+            $('.comandFirst', '#body').on('click',function(){
                 $('#comandFirstAbout').toggleClass('comandAboutVisible');
             });
 
@@ -35,15 +38,32 @@ $(document).ready(function(){
 
 let comandTitle = $('#comandTitle').offset().top;
 let windowHeight = window.innerHeight;
-// let x = (comandTitle - windowHeight)
+
 console.log(`До элемента ${comandTitle}`) 
 console.log(`Длина страници ${windowHeight}`)
 console.log(`Показать ${windowHeight - 100}`)
 
+//----------------Команда-------------//
 $(window).scroll(function() {
-    if ($(this).scrollTop() > windowHeight ) {
-        $('#comandTitle').addClass("comandTitleMove")
-    } else {$('#comandTitle').removeClass("comandTitleMove");}
+    if ($(this).scrollTop() > 900 ) {
+        $('#comandTitle').addClass("titleMove")
+    } else {$('#comandTitle').removeClass("titleMove");}
+});
+
+
+//------------Фото галерея-------------//
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 2300 ) {
+        $('#galaryTitle').addClass("titleMove")
+    } else {$('#galaryTitle').removeClass("titleMove");}
+});
+
+
+//--------------Прайс-----------//
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 2950 ) {
+        $('#priceTitle').addClass("titleMove")
+    } else {$('#priceTitle').removeClass("titleMove");}
 });
 //------parallax
 // jQuery(document).ready(function(){
@@ -56,3 +76,27 @@ $(window).scroll(function() {
 //         $('#parallax').css('top',(0+(scrolled*.25))+'px');
 //     }
 // }); 
+
+
+let left = 0;
+let slider = document.getElementsByClassName('slider');
+let sliderWidth = slider[0].offsetWidth;
+let sliderHeight = sliderWidth + sliderWidth / 2;
+let sliderContainer = document.getElementsByClassName('sliderContainer');
+
+slider[0].style.height = sliderHeight + "px"
+
+
+function autoSlider() {
+    timer = this.timer;
+    timer = setTimeout(function(){
+        left = left - sliderWidth;
+        width = sliderWidth * sliderContainer[0].childElementCount;
+        if (left < -(sliderWidth * (sliderContainer[0].childElementCount - 1))) {
+            left = 0;
+            clearTimeout(timer)
+        }
+        sliderContainer[0].style.left = left + "px";
+        autoSlider();
+    },450)
+}

@@ -131,21 +131,26 @@ main {
 	overflow: hidden;
 }
 
-#comandTitle {
+#comandTitle,
+#galaryTitle,
+#priceTitle {
 	position: relative;
-	left: -100%;
-	font-size: 22px;
+	opacity: 0;
+	font-size: 20px;
 	font-weight: 100;
-	width: 90px;
+	width: 140px;
 	margin: 30px auto;
+	text-align: center;
 	padding: 10px 20px;
 	border-bottom: 2px solid rgba(40, 90, 97, 0.83);
-	-webkit-transition: .1s ease-in-out;
-	transition: .1s ease-in-out;
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
 }
 
-#comandTitle.comandTitleMove {
-	left: 0;
+#comandTitle.titleMove,
+#galaryTitle.titleMove,
+#priceTitle.titleMove {
+	opacity: 1;
 }
 
 .comandFirst h4,
@@ -161,7 +166,7 @@ main {
 	position: relative;
 	width: 80%;
 	overflow: hidden;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 }
 
 .comandImg {
@@ -198,6 +203,51 @@ li {
 #comand li {
 	text-align: center;
 	padding: 10px;
+}
+
+.galary {
+	background-color: rgba(40, 90, 97, 0.83);
+	padding-bottom: 50px;
+}
+
+.slider {
+	position: relative;
+	width: 80%;
+	overflow: hidden;
+	margin: 50px auto 0;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.sliderContainer {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	left: 0;
+	top: 0;
+}
+
+.sliderContainer img {
+	width: 100%;
+	height: 100%;
+}
+
+.priceSection {
+	width: 80%;
+	margin: 0 auto;
+}
+
+th {
+	font-weight: 100;
+	padding: 8px 0;
+	text-align: left;
+}
+
+tr th:nth-child(2) {
+	text-align: right;
 }
 
 #square {

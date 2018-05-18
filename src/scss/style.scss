@@ -138,19 +138,20 @@ main{
 .comand{
     overflow: hidden;
 }
-#comandTitle{
+#comandTitle, #galaryTitle, #priceTitle{
     position: relative;
-    left: -100%;
-    font-size: 22px;
+    opacity: 0;
+    font-size: 20px;
     font-weight: 100;
-    width: 90px;
+    width: 140px;
     margin: 30px auto;
+    text-align: center;
     padding: 10px 20px;
     border-bottom: 2px solid rgba(40, 90, 97, 0.83);
-    transition: .1s ease-in-out;
+    transition: .5s ease-in-out;
 }
-#comandTitle.comandTitleMove{
-    left: 0;
+#comandTitle.titleMove, #galaryTitle.titleMove, #priceTitle.titleMove{
+    opacity: 1;
 }
 .comandFirst h4, .comandSecond h4, .comandThird h4{
     font-weight: 300;
@@ -160,7 +161,7 @@ main{
     position: relative;
     width: 80%;
     overflow: hidden;
-    margin:  0 auto;
+    margin:  0 auto 50px;
 }
 .comandImg{
     width: 100%;
@@ -188,6 +189,51 @@ ul, li{
     text-align: center;
     padding: 10px;
 }
+.galary{
+    background-color: rgba(40, 90, 97, 0.83);
+    padding-bottom: 50px;
+}
+//---------Slider---------------//
+
+.slider{
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    margin: 50px auto 0;
+    box-sizing: content-box;
+}
+.sliderContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    left: 0;
+    top: 0;
+}
+.sliderContainer img{
+    width: 100%;
+    height: 100%;
+}
+//-------------Slider End-------//
+
+
+//-----------Price----------------//
+.priceSection{
+    width: 80%;
+    margin: 0 auto;
+}
+.priceSectionTitle{
+
+}
+th{
+    font-weight: 100;
+    padding: 8px 0;
+    text-align: left;
+}
+tr th:nth-child(2){
+    text-align: right;
+}
+
 
 
 

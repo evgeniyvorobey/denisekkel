@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Denis Ekkel</title>
 </head>
-<body>
+<body id="body">
     <header id="top" class="menu">
         <div class="icon">
             <span></span>
@@ -22,8 +22,8 @@
             <a id="close" class="menu-item" href="#comand">Команда</a>
             <a id="close" class="menu-item" href="">Обучение</a>
             <a id="close" class="menu-item" href="">Мастер класс</a>
-            <a id="close" class="menu-item" href="">Фото галерея</a>            
-            <a id="close" class="menu-item" href="">Прайс</a>
+            <a id="close" class="menu-item" href="#photoGalary">Фото галерея</a>            
+            <a id="close" class="menu-item" href="#price">Прайс</a>
             <a id="close" class="menu-item" href="">Магазин</a>
         </nav>
     </header>
@@ -57,9 +57,7 @@
                     <ul class="skillList" >
                         <li>Покраска</li>
                         <li>Стрижка</li>
-                        <li>Лучший из лучших колористов, парикмахеров, 
-                            визажистов – преподавателей и экспертов в своем деле.
-                        </li>
+                        <li>Колорист</li>
                 </div>
             </div>
             <div class="comandSecond">
@@ -69,9 +67,7 @@
                     <ul class="skillList" >
                         <li>Покраска</li>
                         <li>Стрижка</li>
-                        <li>Лучший из лучших колористов, парикмахеров, 
-                            визажистов – преподавателей и экспертов в своем деле.
-                        </li>
+                        <li>Колорист</li>
                 </div>
             </div>
             <div class="comandThird">
@@ -81,14 +77,54 @@
                     <ul class="skillList" >
                         <li>Покраска</li>
                         <li>Стрижка</li>
-                        <li>Лучший из лучших колористов, парикмахеров, 
-                            визажистов – преподавателей и экспертов в своем деле.
-                        </li>
+                        <li>Колорист</li>
                 </div>
             </div>
             
         </div>
-        <div class="price"></div>
+        <div id="photoGalary" class="galary">
+            <h2 id="galaryTitle">Фото галерея</h2>
+            <div class="slider">
+                <div class="sliderContainer">
+                    <img src="img/work/1.jpg" alt="">
+                    <img src="img/work/2.jpg" alt="">
+                    <img src="img/work/3.jpg" alt="">
+                    <img src="img/work/4.jpg" alt="">
+                    <img src="img/work/5.jpg" alt="">
+                    <img src="img/work/6.jpg" alt="">
+                    <img src="img/work/7.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="price" class="price">
+            <h2 id="priceTitle">Прайс</h2>
+            <table class="priceSection">
+                <tr><th class="priceSectionTitle"><h4>Окрашивание</h4></th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+            </table>
+            <table class="priceSection">
+                <tr><th><h4>Стрижка</h4></th></tr>
+                <tr><th>Женская</th><th>800 UAH</th></tr>
+                <tr><th>Мужская</th><th>500 UAH</th></tr>
+            </table>
+            <table class="priceSection">
+                <tr><th class="" ><h4>Укладки</h4></th></tr>
+                <tr><th>— Укладка стандарт</th><th>700 UAH</th></tr>
+                <tr><th>Укладка люкс</th><th>700 UAH</th></tr>
+            </table>
+            <table class="priceSection">
+                <tr><th><h4>Уход за волосами</h4></th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+                <tr><th>Тонирование 1 длина</th><th>700 UAH</th></tr>
+            </table>
+        </div>
         <div class="education"></div>
         <div class="masterClass"></div>
         <div class="magazin"></div>
