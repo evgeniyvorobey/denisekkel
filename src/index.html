@@ -23,14 +23,14 @@
             <a id="close" class="menu-item" href="#photoGalary">Фото галерея</a>            
             <a id="close" class="menu-item" href="#price">Прайс</a>
             <a id="close" class="menu-item" href="#education">Обучение</a>
-            <a id="close" class="menu-item" href="">Мастер класс</a>
-            <a id="close" class="menu-item" href="">Магазин</a>
+            <a id="close" class="menu-item" href="#masterClass">Мастер класс</a>
+            <a id="close" class="menu-item" href="#magazine">Магазин</a>
         </nav>
     </header>
     <main>
         <div class="mainTitle">
             <h1>DENIS EKKEL</h1>
-            <h4 class="h1teg">HAIR COUTURE</h4>
+            <h4 class="h4teg">HAIR COUTURE</h4>
         </div>
         <img class="mainPhoto" src="img/1 2.jpg" alt="denis">
         <p id="aboutMe" class="abutdenis">
@@ -126,8 +126,10 @@
             </div>
         </div>
         <div id="education" class="education">
-            <h2 id="educationTitle">Обучение</h2>
-            <img src="img/work.jpg" alt="">
+            <div class="eduContainer">
+                <h2 id="educationTitle">Обучение</h2>
+                <img src="img/work.jpg" alt="">
+            </div>
             <div class="eduFirst">
                 <h3 class="EduFirstTitle">О курсе обучения</h3>
                 <p class="EduFirstInfo">Команда профессионалов в области красоты, имиджа и психологии, 
@@ -146,18 +148,45 @@
                             самореализации, преобразиться и приобрести привычку обращать внимание лишь 
                             на те желания, которые благотворно влияют и на тело и на душу.
                     </p>
-                    <h3>Длительность обучения</h3>
-                    <p>Под чутким взором обучени длится один месяцю</p>
-                    <h3>Стоимость</h3>
-                    <p class="priseEducation">
-                        <table>
-                            <tr><th>1 месяц</th><th>20 000 UAH</th></tr>
-                        </table>
-                    </p>
+                    <table class="cost">
+                            <tr><th>Цена: 20 000 UAH</th></tr>
+                    </table>
             </div>
         </div>
-        <div class="masterClass"></div>
-        <div class="magazin"></div>
+        <div id="masterClass" class="masterClass">
+            <div class="masterClassContainer">
+                <h2 id="masterClassTitle">Мастер клас</h2>
+                <img src="img/masterClass.jpg" alt="">
+            </div>
+            <div class="masterClassOption">
+                <div class="masterClassOptionOne">
+                    <h3>Первый</h3>
+                    <ul>
+                        <li> <h4>Мужская стрижка</h4></li>
+                        <li>— Тренды</li>
+                        <li>— Техника</li>
+                    </ul>
+                    <table class="cost">
+                        <tr><th>Цена: 20 000 UAH</th></tr>
+                    </table>
+                </div>
+                <div class="masterClassOptionTwo">
+                    <h3>Второй</h3>
+                    <ul>
+                        <li> <h4>Окрашивание</h4></li>
+                        <li>— Тренды</li>
+                        <li>— Техника</li>
+                        <li>— Техника подбора цвета</li>
+                    </ul>
+                    <table class="cost">
+                        <tr><th>Цена: 20 000 UAH</th></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="magazine" class="magazin">
+            
+        </div>
         <div id="toTop">
             <a href="#top" id="square"></a>
         </div>

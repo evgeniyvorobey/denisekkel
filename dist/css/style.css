@@ -94,7 +94,7 @@ body {
 
 main {
 	position: relative;
-	top: 285px;
+	top: 340px;
 }
 
 .mainTitle {
@@ -104,20 +104,22 @@ main {
 
 .mainTitle h1 {
 	text-align: center;
+	margin: 0;
 }
 
-.h1teg {
+.h4teg {
 	position: relative;
+	margin: 0;
 	text-align: center;
 	font-size: 12px;
 	font-weight: 100;
 }
 
 .abutdenis {
+	width: 80%;
 	font-size: 19px;
 	padding: 25px 10px;
-	margin: 35px 20px;
-	z-index: 2;
+	margin: 20px auto;
 }
 
 .mainPhoto {
@@ -134,15 +136,16 @@ main {
 #comandTitle,
 #galaryTitle,
 #priceTitle,
-#educationTitle {
+#educationTitle,
+#masterClassTitle {
 	position: relative;
 	opacity: 0;
 	font-size: 20px;
 	font-weight: 100;
 	width: 140px;
-	margin: 10px auto;
+	margin: 30px auto 30px;
 	text-align: center;
-	padding: 30px 20px;
+	padding: 40px 20px 5px;
 	border-bottom: 2px solid rgba(40, 90, 97, 0.83);
 	-webkit-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
@@ -151,7 +154,8 @@ main {
 #comandTitle.titleMove,
 #galaryTitle.titleMove,
 #priceTitle.titleMove,
-#educationTitle.titleMove {
+#educationTitle.titleMove,
+#masterClassTitle.titleMove {
 	opacity: 1;
 }
 
@@ -301,6 +305,48 @@ tr th:nth-child(2) {
 	font-size: 19px;
 	font-weight: 100;
 	padding: 25px 0;
+}
+
+.cost {
+	width: 100%;
+}
+
+.cost th {
+	text-align: right;
+	width: 100px;
+}
+
+.masterClass {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.masterClass img {
+	width: 100%;
+	height: auto;
+}
+
+.masterClassOption h3 {
+	font-size: 19px;
+	font-weight: 100;
+	padding: 25px 0;
+}
+
+.masterClassOption li,
+.masterClassOption ul {
+	padding: 0;
+}
+
+.masterClassOption h4 {
+	font-weight: 100;
+	font-size: 17px;
+}
+
+footer {
+	top: 340px;
+	position: relative;
+	height: 150px;
+	background-color: rgba(40, 90, 97, 0.83);
 }
 
 #square {

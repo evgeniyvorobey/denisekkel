@@ -69,9 +69,17 @@ $(window).scroll(function() {
 
 //--------------Обучение----------//
 $(window).scroll(function() {
-    if($(this).scrollTop() > 3750 ) {
+    if($(this).scrollTop() > 3900 ) {
         $('#educationTitle').addClass("titleMove")
     } else {$('#educationTitle').removeClass("titleMove");}
+});
+
+
+//--------Мастер класс------------//
+$(window).scroll(function() {
+    if($(this).scrollTop() > 5100 ) {
+        $('#masterClassTitle').addClass("titleMove")
+    } else {$('#masterClassTitle').removeClass("titleMove");}
 });
 //------parallax
 // jQuery(document).ready(function(){
