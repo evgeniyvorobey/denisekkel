@@ -45,59 +45,75 @@ console.log(`Показать ${windowHeight - 100}`)
 
 //----------------Команда-------------//
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 900 ) {
-        $('#comandTitle').addClass("titleMove")
-    } else {$('#comandTitle').removeClass("titleMove");}
+    if ($(this).height() <= 812 ) {
+        if ($(this).scrollTop() > 900 ) {
+            $('#comandTitle').addClass("titleMove")
+        } else {
+            $('#comandTitle').removeClass("titleMove");
+        }
+    } else if ($(this).height() > 812 ) {
+        if ($(this).scrollTop() > 800 ) {
+            $('#comandTitle').addClass("titleMove")
+        } else {
+            $('#comandTitle').removeClass("titleMove");
+        }
+    }
 });
 
 
 //------------Фото галерея-------------//
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 2300 ) {
-        $('#galaryTitle').addClass("titleMove")
-    } else {$('#galaryTitle').removeClass("titleMove");}
+    if ($(this).height() <= 812 ) {
+        if ($(this).scrollTop() > 2300 ) {
+            $('#galaryTitle').addClass("titleMove")
+        } else {
+            $('#galaryTitle').removeClass("titleMove");
+        }
+    }
 });
 
 
 //--------------Прайс-----------//
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 3000 ) {
-        $('#priceTitle').addClass("titleMove")
-    } else {$('#priceTitle').removeClass("titleMove");}
+    if ($(this).height() <= 812 ) {
+        if ($(this).scrollTop() > 3000 ) {
+            $('#priceTitle').addClass("titleMove")
+        } else {
+            $('#priceTitle').removeClass("titleMove");
+        }
+    }
 });
 
 
 //--------------Обучение----------//
 $(window).scroll(function() {
-    if($(this).scrollTop() > 3900 ) {
-        $('#educationTitle').addClass("titleMove")
-    } else {$('#educationTitle').removeClass("titleMove");}
+    if ($(this).height() <= 812 ) {
+        if($(this).scrollTop() > 3900 ) {
+            $('#educationTitle').addClass("titleMove")
+        } else {
+            $('#educationTitle').removeClass("titleMove");
+        }
+    } 
 });
 
 
 //--------Мастер класс------------//
 $(window).scroll(function() {
-    if($(this).scrollTop() > 5100 ) {
-        $('#masterClassTitle').addClass("titleMove")
-    } else {$('#masterClassTitle').removeClass("titleMove");}
+    if ($(this).height() <= 812 ) {
+        if($(this).scrollTop() > 5100 ) {
+            $('#masterClassTitle').addClass("titleMove")
+        } else {
+            $('#masterClassTitle').removeClass("titleMove");
+        }
+    }
 });
-//------parallax
-// jQuery(document).ready(function(){
-//     $(window).scroll(function(e){
-//         parallaxScroll();
-//     });
-
-//     function parallaxScroll(){
-//         var scrolled = $(window).scrollTop();
-//         $('#parallax').css('top',(0+(scrolled*.25))+'px');
-//     }
-// }); 
 
 
+//----------Слайдер------------//
 let left = 0;
 let slider = document.getElementsByClassName('slider');
 let sliderWidth = slider[0].offsetWidth;
-let sliderHeight = sliderWidth + sliderWidth / 2;
+let sliderHeight = sliderWidth + sliderWidth / 3;
 let sliderContainer = document.getElementsByClassName('sliderContainer');
 
 slider[0].style.height = sliderHeight + "px"
@@ -112,7 +128,7 @@ function autoSlider() {
             left = 0;
             clearTimeout(timer)
         }
-        sliderContainer[0].style.left = left + "px";
+        sliderContainer[0].style.left = left  + "px";
         autoSlider();
     },450)
 }

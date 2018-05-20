@@ -1,0 +1,23 @@
+#goods {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.single-goods {
+	width: 300px;
+	border: 1px solid black;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+.single-goods img {
+	width: 100%;
+	height: auto;
+}
+
+.byButton {
+	margin: 15px;
+}
+
