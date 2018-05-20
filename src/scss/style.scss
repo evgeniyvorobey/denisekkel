@@ -230,9 +230,6 @@ ul, li{
     flex-direction: column-reverse;
     align-items: center;
 }
-.aboutGalary{
-
-}
 .aboutGalary a{
     display: block;
     margin: 0 auto;
@@ -343,7 +340,7 @@ footer{
     padding: 30px 0 0;
     top: 340px;
     position: relative;
-    height: 370px;
+    height: auto;
     background-color: rgba(40, 90, 97, 0.83);
 }
 footer a{
@@ -391,11 +388,11 @@ footer a{
 
 @media (min-width: 411px) {
     .map{
-        width: 340px;
+        width: 330px;
         margin: 0 auto;
     }
     .contactItem{
-        width: 340px;
+        width: 330px;
         margin: 0 auto;
     }
 }
@@ -409,24 +406,6 @@ footer a{
         position: relative;
         top: 15px;
         text-align: center;
-    }
-    .links{
-        position: fixed;
-        width: 750px;
-        height: 50px;
-        top: 50px;
-        left: 50%;
-        margin-top: -25px;
-        margin-left: -375px;
-        z-index: 1;
-        background-color: rgba(40, 90, 97, 0.83);
-        display: flex;
-        justify-content:  center;
-    }
-    .menu-item{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
     .comandBlock{
         width: 80%;
@@ -478,24 +457,16 @@ footer a{
     }
     .contacts{
         display: flex;
-        justify-content: space-between;
-    }
-    footer{
-        height: 225px;
     }
     .contactItem{
-        padding: 0 0 0 25px;
-        box-sizing:  border-box;
+        padding: 0 0 0 20px;
+        box-sizing: border-box;
     }
 }
 
 @media (min-width: 1024px){
     body{
         width: 1024px;
-    }
-    .links{
-        width: 900px;
-        margin-left: -450px;
     }
     .galaryContainer{
         justify-content: space-evenly;
@@ -536,9 +507,6 @@ footer a{
     .masterClassOptionOne h3{
         margin: 0;
         padding: 0 0 25px 0;
-    }
-    footer{
-        height: 235px;
     }
 }
 

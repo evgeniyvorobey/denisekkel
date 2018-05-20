@@ -382,7 +382,7 @@ footer {
 	padding: 30px 0 0;
 	top: 340px;
 	position: relative;
-	height: 370px;
+	height: auto;
 	background-color: rgba(40, 90, 97, 0.83);
 }
 
@@ -432,12 +432,12 @@ footer a {
 @media (min-width: 411px) {
 
 .map {
-	width: 340px;
+	width: 330px;
 	margin: 0 auto;
 }
 
 .contactItem {
-	width: 340px;
+	width: 330px;
 	margin: 0 auto;
 }
 
@@ -454,37 +454,6 @@ body {
 	position: relative;
 	top: 15px;
 	text-align: center;
-}
-
-.links {
-	position: fixed;
-	width: 750px;
-	height: 50px;
-	top: 50px;
-	left: 50%;
-	margin-top: -25px;
-	margin-left: -375px;
-	z-index: 1;
-	background-color: rgba(40, 90, 97, 0.83);
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-}
-
-.menu-item {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
 }
 
 .comandBlock {
@@ -572,17 +541,10 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-}
-
-footer {
-	height: 225px;
 }
 
 .contactItem {
-	padding: 0 0 0 25px;
+	padding: 0 0 0 20px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
@@ -593,11 +555,6 @@ footer {
 
 body {
 	width: 1024px;
-}
-
-.links {
-	width: 900px;
-	margin-left: -450px;
 }
 
 .galaryContainer {
@@ -657,10 +614,6 @@ body {
 .masterClassOptionOne h3 {
 	margin: 0;
 	padding: 0 0 25px 0;
-}
-
-footer {
-	height: 235px;
 }
 
 }
