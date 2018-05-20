@@ -101,8 +101,7 @@
 
 
 body{
-    width: 100%;;
-    font-family: Arial, Helvetica, sans-serif;
+    width: auto;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -194,7 +193,7 @@ main{
 }
 ul, li{
     list-style: none;
-    padding: 0 0 0 15px;
+    padding: 0;
     margin: 0;
 }
 #comand li{
@@ -225,6 +224,28 @@ ul, li{
 .sliderContainer img{
     width: 100%;
     height: 100%;
+}
+.galaryContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.aboutGalary{
+
+}
+.aboutGalary a{
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    transition: .2s ease-in-out;
+}
+.aboutGalary a:hover{
+    filter: blur(1px)
+}
+.aboutGalary img{
+    width: 50px;
+    height: 50px;
 }
 //-------------Slider End-------//
 
@@ -322,7 +343,7 @@ footer{
     padding: 30px 0 0;
     top: 340px;
     position: relative;
-    height: auto;
+    height: 370px;
     background-color: rgba(40, 90, 97, 0.83);
 }
 footer a{
@@ -339,8 +360,10 @@ footer a{
     height: auto;
 }
 .dewBlock{
+    text-align: center;
+    font-size: 10px;
     width: 80%;
-    margin: 0 auto;
+    margin: 30px auto 0;
 }
 
 
@@ -366,7 +389,16 @@ footer a{
 //---------------ToTop end--------
 
 
-
+@media (min-width: 411px) {
+    .map{
+        width: 340px;
+        margin: 0 auto;
+    }
+    .contactItem{
+        width: 340px;
+        margin: 0 auto;
+    }
+}
 
 @media (min-width: 768px) {
     body{
@@ -377,5 +409,141 @@ footer a{
         position: relative;
         top: 15px;
         text-align: center;
+    }
+    .links{
+        position: fixed;
+        width: 750px;
+        height: 50px;
+        top: 50px;
+        left: 50%;
+        margin-top: -25px;
+        margin-left: -375px;
+        z-index: 1;
+        background-color: rgba(40, 90, 97, 0.83);
+        display: flex;
+        justify-content:  center;
+    }
+    .menu-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .comandBlock{
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+    }
+    .comandSecond{
+        margin: 0 20px;
+    }
+    .galaryContainer{
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .aboutGalary{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        font-size: 15px;
+    }
+    .aboutGalary a{
+        align-self: center;
+        width: 50px;
+        height: 50px;
+        transition: .2s ease-in-out;
+    }
+    .aboutGalary a:hover{
+        filter: grayscale(1)
+    }
+    .aboutGalary img{
+        width: 50px;
+        height: 50px;
+    }
+    .slider{
+        margin: 0;
+        width: 350px;
+    }
+    .priceContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .priceSection{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 25px;
+    }
+    .contacts{
+        display: flex;
+        justify-content: space-between;
+    }
+    footer{
+        height: 225px;
+    }
+    .contactItem{
+        padding: 0 0 0 25px;
+        box-sizing:  border-box;
+    }
+}
+
+@media (min-width: 1024px){
+    body{
+        width: 1024px;
+    }
+    .links{
+        width: 900px;
+        margin-left: -450px;
+    }
+    .galaryContainer{
+        justify-content: space-evenly;
+    }
+    .aboutGalary{
+        font-size: 18px;
+    }
+    .slider{
+        width: 450px;
+    }
+    .eduContainer{
+        display: flex;
+    }
+    .education img{
+        width: 55%;
+        height: 100%;
+    }
+    .eduFirst{
+        box-sizing: border-box;
+        padding: 0  20px 20px 20px;
+    }
+    .eduFirst h3{
+        margin: 0;
+        padding: 0;
+    }
+    .masterClassContainer{
+        display: flex;
+    }
+    .masterClassContainer img{
+        width: 55%;
+        height: 100%;
+    }
+    .masterClassOption{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 20px 20px 20px;
+    }
+    .masterClassOptionOne h3{
+        margin: 0;
+        padding: 0 0 25px 0;
+    }
+    footer{
+        height: 235px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body{
+        width: 1200px;
     }
 }
