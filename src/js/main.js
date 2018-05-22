@@ -3,7 +3,7 @@ autoSlider();
 
 $(document).ready(function(){
     $("#menu, #toTop").on("click","a", function (event) {
-        event.preventDefault();
+        // event.preventDefault();
         var id  = $(this).attr('href'),
         top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 200);
@@ -36,23 +36,17 @@ $(document).ready(function(){
     })(jQuery);
 });
 
-let comandTitle = $('#comandTitle').offset().top;
-let windowHeight = window.innerHeight;
-
-console.log(`До элемента ${comandTitle}`) 
-console.log(`Длина страници ${windowHeight}`)
-console.log(`Показать ${windowHeight - 100}`)
 
 //----------------Команда-------------//
 $(window).scroll(function() {
     if ($(this).width() <= 767 ) {
-        if ($(this).scrollTop() > 900 ) {
+        if ($(this).scrollTop() > 1000 ) {
             $('#comandTitle').addClass("titleMove")
         } else {
             $('#comandTitle').removeClass("titleMove");
         }
     } else if ($(this).width() >= 768) {
-        if ($(this).scrollTop() > 900 ) {
+        if ($(this).scrollTop() > 1200 ) {
             $('#comandTitle').addClass("titleMove")
         } else {
             $('#comandTitle').removeClass("titleMove");
@@ -64,13 +58,13 @@ $(window).scroll(function() {
 //------------Фото галерея-------------//
 $(window).scroll(function() {
     if ($(this).width() <= 767 ) {
-        if ($(this).scrollTop() > 2300 ) {
+        if ($(this).scrollTop() > 2500 ) {
             $('#galaryTitle').addClass("titleMove")
         } else {
             $('#galaryTitle').removeClass("titleMove");
         }
     } else if ($(this).width() >= 768) {
-        if ($(this).scrollTop() > 900 ) {
+        if ($(this).scrollTop() > 1700 ) {
             $('#galaryTitle').addClass("titleMove")
         } else {
             $('#galaryTitle').removeClass("titleMove");
@@ -82,13 +76,13 @@ $(window).scroll(function() {
 //--------------Прайс-----------//
 $(window).scroll(function() {
     if ($(this).width() <= 767 ) {
-        if ($(this).scrollTop() > 3000 ) {
+        if ($(this).scrollTop() > 3200 ) {
             $('#priceTitle').addClass("titleMove")
         } else {
             $('#priceTitle').removeClass("titleMove");
         }
     } else if ($(this).width() >= 768) {
-        if ($(this).scrollTop() > 2900 ) {
+        if ($(this).scrollTop() > 2500 ) {
             $('#priceTitle').addClass("titleMove")
         } else {
             $('#priceTitle').removeClass("titleMove")
@@ -100,13 +94,13 @@ $(window).scroll(function() {
 //--------------Обучение----------//
 $(window).scroll(function() {
     if ($(this).width() <= 767 ) {
-        if($(this).scrollTop() > 3900 ) {
+        if($(this).scrollTop() > 4150 ) {
             $('#educationTitle').addClass("titleMove")
         } else {
             $('#educationTitle').removeClass("titleMove");
         }
     } else if ($(this).width() >= 768) {
-        if ($(this).scrollTop() > 3800 ) {
+        if ($(this).scrollTop() > 3200 ) {
             $('#educationTitle').addClass("titleMove")
         } else {
             $('#educationTitle').removeClass("titleMove")
@@ -118,16 +112,16 @@ $(window).scroll(function() {
 //--------Мастер класс------------//
 $(window).scroll(function() {
     if ($(this).width() <= 767 ) {
-        if($(this).scrollTop() > 5100 ) {
+        if($(this).scrollTop() > 5450 ) {
             $('#masterClassTitle').addClass("titleMove")
         } else {
             $('#masterClassTitle').removeClass("titleMove");
         }
     } else if ($(this).width() >= 768) {
-        if ($(this).scrollTop() > 5000 ) {
-            $('#galaryTitle').addClass("titleMove")
+        if ($(this).scrollTop() > 3900 ) {
+            $('#masterClassTitle').addClass("titleMove")
         } else {
-            $('#galaryTitle').removeClass("titleMove")
+            $('#masterClassTitle').removeClass("titleMove")
         }
     }
 });

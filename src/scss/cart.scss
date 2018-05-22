@@ -103,32 +103,10 @@
 
 
 
-
-
-#goods{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    // flex-direction: row;
-}
-.single-goods{
-    min-width: 150px;
-    max-width: 200px;
-    border: 1px solid black;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-}
-.single-goods img{
-    width: 100%;
+#cartImg{
+    width: 70px;
     height: auto;
 }
-.byButton{
-    margin: 15px;
-}
-
-
-
 
 
 

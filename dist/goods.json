@@ -1,19 +1,19 @@
 {
     "00001" : {
         "name" : "Сертификат",
-        "cost" : "1000 UAH",
+        "cost" : "1000",
         "description" : "Сертификат на 1000 UAH",
         "image" : "img/magazine/cert1.png"
     },
     "00002" : {
         "name" : "Сертификат",
-        "cost" : "2000 UAH",
+        "cost" : "2000",
         "description" : "Сертификат на 2000 UAH",
         "image" : "img/magazine/cert1.png"
     },
     "00003" : {
         "name" : "Сертификат",
-        "cost" : "3000 UAH",
+        "cost" : "3000",
         "description" : "Сертификат на 3000 UAH",
         "image" : "img/magazine/cert1.png"
     }
