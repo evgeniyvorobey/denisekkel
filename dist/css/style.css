@@ -155,6 +155,14 @@ main {
 	transition: .5s ease-in-out;
 }
 
+#comandTitle:hover,
+#galaryTitle:hover,
+#priceTitle:hover,
+#educationTitle:hover,
+#masterClassTitle:hover {
+	width: 170px;
+}
+
 #comandTitle.titleMove,
 #galaryTitle.titleMove,
 #priceTitle.titleMove,
@@ -314,14 +322,98 @@ tr th:nth-child(2) {
 	background-color: rgba(255, 255, 255, 0.83);
 	border: 0px;
 	border-bottom: 1px solid;
+	cursor: pointer;
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
 }
 
 .buttonContainer:hover {
 	width: 150px;
 	color: #fff;
 	background-color: rgba(40, 90, 97, 0.83);
-	-webkit-transition: .25s ease-in-out;
-	transition: .25s ease-in-out;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 1;
+}
+
+.popup {
+	position: fixed;
+	width: 300px;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 40px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: rgba(40, 90, 97, 0.83);
+}
+
+.close-popup {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.close-popup::before {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 30px;
+	top: 10px;
+	left: -5px;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.close-popup::after {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 30px;
+	top: 10px;
+	left: -5px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.formInput {
+	width: 100%;
+	font-weight: 100;
+	height: 29px;
+	border: 1px solid;
+	margin: 2px;
+}
+
+#button {
+	display: block;
+	position: relative;
+	border: 1px solid;
+	height: 29px;
+	margin: 0 auto;
+	cursor: pointer;
+	width: 100px;
+	margin: 5px auto;
+	font-weight: 100;
+	background-color: #fff;
+}
+
+.thanks {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 100;
 }
 
 .education {

@@ -150,3 +150,47 @@ function autoSlider() {
         autoSlider();
     },450)
 }
+
+
+
+// Открыти по клику на кнопку
+$('.js-buttonContainer').click(function() {
+    $('main,footer, header').css('filter','blur(5px)');
+    $('.js-overlay-compaign').fadeIn();
+});
+
+//  Закрыти по клику на крестик
+$('.js-close-campaign').click(function() {
+    $('.js-overlay-compaign').fadeOut();
+    $('main,footer, header').css('filter','none');
+});
+
+//  Закрытие по клику в любом месте
+$(document).mouseup(function(e) {
+    let popup = $('.js-popup-compaign');
+    if (e.target != popup[0] && popup.has(e.target).length === 0) {
+        $('.js-overlay-compaign').fadeOut();
+        $('main,footer, header').css('filter','none');
+    }
+});
+
+
+//-----------------AJAX 
+function AjaxFormRequest(result_id,formMain,url) {
+    jQuery.ajax({
+        url:     url,
+        type:     "POST",
+        dataType: "html",
+        data: jQuery("#"+formMain).serialize(),
+});
+
+// $(':input','#formMain')
+//     .not(':button, :submit, :reset, :hidden')
+//     .val('')
+//     .removeAttr('checked')
+//     .removeAttr('selected');
+}
+
+$('#button').click(function(){
+    document.getElementById('formMain').innerHTML = `<p class="thanks">Спасибо мы свяжемся с вами.</p>`;
+})

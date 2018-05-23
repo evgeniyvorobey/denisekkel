@@ -11,6 +11,8 @@ $.getJSON('goods.json', function(data){
             //если корзина пуста
             let out = `Корзина пуста. Добавьте товар в корзину <a href="magazine.html">
             Магазин</a>`;
+            let amountItem = document.getElementsByClassName('itemCost').length;
+            costAllItem = 0;
             $('#my-cart').html(out);
         } else {
             let out = '';
@@ -22,22 +24,38 @@ $.getJSON('goods.json', function(data){
                 out += `<button class="minus" data-art="${key}">-</button>`;
                 out += cart[key];
                 out += `<button class="plus" data-art="${key}">+</button>`;
-                out += `<span class="itemCost">${cart[key] * goods[key].cost}</span>`;
+                out += `<span class="itemCost">${cart[key] * goods[key].cost} UAH</span>`;
                 out += `</div>`
+
             }
 
             $('#my-cart').html(out);
             $('.plus').on('click', plusGoods);
             $('.minus').on('click', minusGoods);
             $('.delete').on('click', deleteGoods);
+        
         }
     }
+
+    function allItemCost(){
+        // Считаем общую сумму по заказам
+        let amountItem = document.getElementsByClassName('itemCost').length;
+        costAllItem = 0;
+        for (let i = 0; i < amountItem; i++){
+            costAllItem += parseInt(document.getElementsByClassName('itemCost')[i].innerHTML);
+        }
+        console.log(costAllItem)
+        $('#allCost').html(`<span>${costAllItem} UAH</span>`);
+    }
+        allItemCost();
+
 
     function deleteGoods(){
         let articul = $(this).attr('data-art');
         delete cart[articul];
         saveCartToLS();
         showCart();
+        allItemCost();
     }
     
     function plusGoods(){
@@ -45,6 +63,7 @@ $.getJSON('goods.json', function(data){
         cart[articul]++;
         saveCartToLS();
         showCart();
+        allItemCost();
     }
     
 
@@ -57,6 +76,7 @@ $.getJSON('goods.json', function(data){
         }
         saveCartToLS();
         showCart();
+        allItemCost();
     }
 });
 
@@ -103,15 +123,5 @@ $(document).ready(function(){
 
 
 
-window.onload = function() {
-    function showAllCost(){
-        let amountItem = document.getElementsByClassName('itemCost').length;
-        let costAllItem = 0;
-        for (let i = 0; i < amountItem; i++){
-            costAllItem += parseInt(document.getElementsByClassName('itemCost')[i].innerHTML)
-        }
-        console.log(costAllItem)
-    }
-    showAllCost();
-};
+
 

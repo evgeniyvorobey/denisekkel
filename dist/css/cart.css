@@ -87,9 +87,39 @@
 	display: block;
 }
 
+#my-cart {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.goodsItem {
+	position: relative;
+	margin: 40px 0;
+	border: 1px solid;
+}
+
+.goodsItem button {
+	width: 24px;
+	height: 24px;
+	border: 1px solid black;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.753);
+	color: rgba(128, 128, 128, 0.877);
+}
+
+.goodsItem button:nth-child(1) {
+	position: absolute;
+}
+
 #cartImg {
-	width: 70px;
+	width: 90px;
 	height: auto;
+}
+
+#allCost {
+	margin: 0 auto;
+	width: 80%;
+	text-align: right;
 }
 
 footer {
