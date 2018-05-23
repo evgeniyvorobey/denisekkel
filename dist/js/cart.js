@@ -11,8 +11,8 @@ $.getJSON('goods.json', function(data){
             //если корзина пуста
             let out = `Корзина пуста. Добавьте товар в корзину <a href="magazine.html">
             Магазин</a>`;
-            let amountItem = document.getElementsByClassName('itemCost').length;
-            costAllItem = 0;
+            // let amountItem = document.getElementsByClassName('itemCost').length;
+            // costAllItem = 0;
             $('#my-cart').html(out);
         } else {
             let out = '';
@@ -44,8 +44,11 @@ $.getJSON('goods.json', function(data){
         for (let i = 0; i < amountItem; i++){
             costAllItem += parseInt(document.getElementsByClassName('itemCost')[i].innerHTML);
         }
-        console.log(costAllItem)
-        $('#allCost').html(`<span>${costAllItem} UAH</span>`);
+        if ( costAllItem !== 0 ) {
+            $('#allCost').html(`<span>${costAllItem} UAH</span>`);
+        } else {
+            $('#allCost').html('');
+        }
     }
         allItemCost();
 

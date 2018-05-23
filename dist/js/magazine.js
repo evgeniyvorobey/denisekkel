@@ -47,11 +47,16 @@ function checkCart(){
 
 function showMiniCart(){
     //Показываю содкржимое корзины
+    cartItem = 0;
     let out = '';
-    for (let w in cart){
-        out += w + '---'+cart[w]+'<br>'
+    for (let i in cart){
+        cartItem += cart[i];
     }
-    out += `<br><a href="cart.html">Корзина</a>`
+    if (cartItem !== 0) {
+        out += `<a class="cart" href="cart.html">В корзине ${cartItem} товар(ов)</a>`;
+    } else {
+        out += `<a class="cart" href="cart.html">Корзина пуста</a>`;
+    }
     $('#mini-cart').html(out);
 }
 

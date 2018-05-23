@@ -87,23 +87,86 @@
 	display: block;
 }
 
+body {
+	width: auto;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 100;
+}
+
+main {
+	position: relative;
+	top: 340px;
+}
+
+.mainTitle {
+	position: relative;
+	top: -150px;
+}
+
+.mainTitle h1 {
+	text-align: center;
+	margin: 0;
+}
+
+.h4teg {
+	position: relative;
+	margin: 0;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 100;
+}
+
+.magazine {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.magazineTitle {
+	position: relative;
+	font-size: 20px;
+	font-weight: 100;
+	width: 140px;
+	margin: 30px auto 60px;
+	text-align: center;
+	padding: 40px 20px 5px;
+	border-bottom: 2px solid rgba(40, 90, 97, 0.83);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+.magazineTitle:hover {
+	width: 170px;
+}
+
+#mini-cart {
+	border-bottom: 2px solid rgba(40, 90, 97, 0.83);
+	height: 30px;
+}
+
+.cart {
+	position: absolute;
+	right: 10%;
+	margin: 0 10px;
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+}
+
 #goods {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 .single-goods {
-	min-width: 150px;
-	max-width: 200px;
-	border: 1px solid black;
-	margin: 10px;
-	padding: 10px;
+	width: 120px;
+	margin: 5px;
+	padding: 5px;
 	text-align: center;
 }
 
@@ -114,6 +177,20 @@
 
 .byButton {
 	margin: 15px;
+	background-color: white;
+	text-decoration: none;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 100;
+	cursor: pointer;
+	width: 100px;
+	height: 30px;
+	border-radius: 0;
+	border: 1px solid rgba(40, 90, 97, 0.83);
+}
+
+.byButton:hover {
+	background-color: rgba(40, 90, 97, 0.83);
+	color: white;
 }
 
 footer {
@@ -166,6 +243,127 @@ footer a {
 #square.toTopShow {
 	opacity: 1;
 	right: 15px;
+}
+
+@media (min-width: 411px) {
+
+body {
+	width: 410px;
+	margin: 0 auto;
+}
+
+.map {
+	width: 330px;
+	margin: 0 auto;
+}
+
+.contactItem {
+	width: 330px;
+	margin: 0 auto;
+}
+
+}
+
+@media (min-width: 768px) {
+
+body {
+	width: 768px;
+	margin: 0 auto;
+}
+
+.menu {
+	position: relative;
+	top: 15px;
+	text-align: center;
+}
+
+.contacts {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.contactItem {
+	padding: 0 0 0 20px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+body {
+	width: 1024px;
+}
+
+.galaryContainer {
+	-webkit-box-pack: space-evenly;
+	-ms-flex-pack: space-evenly;
+	justify-content: space-evenly;
+}
+
+.aboutGalary {
+	font-size: 18px;
+}
+
+.slider {
+	width: 450px;
+}
+
+.eduContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.education img {
+	width: 55%;
+	height: 100%;
+}
+
+.eduFirst {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0  20px 20px 20px;
+}
+
+.eduFirst h3 {
+	margin: 0;
+	padding: 0;
+}
+
+.masterClassContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.masterClassContainer img {
+	width: 55%;
+	height: 100%;
+}
+
+.masterClassOption {
+	width: 50%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 20px 20px 20px;
+}
+
+.masterClassOptionOne h3 {
+	margin: 0;
+	padding: 0 0 25px 0;
+}
+
+}
+
+@media (min-width: 1200px) {
+
+body {
+	width: 1200px;
+}
+
 }
 
 @media (max-width: 767px) {
