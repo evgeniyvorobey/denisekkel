@@ -2,30 +2,34 @@ let cart = {}; //Корзина
 
 $.getJSON('goods.json', function(data){
     let goods = data; // Все товары в масиве
-    // console.log(goods)
     checkCart();
-    // console.log(cart)
     showCart(); //Вывод товара на страницу
     function showCart(){
         if ($.isEmptyObject(cart)) {
             //если корзина пуста
-            let out = `Корзина пуста. Добавьте товар в корзину <a href="magazine.html">
-            Магазин</a>`;
-            // let amountItem = document.getElementsByClassName('itemCost').length;
-            // costAllItem = 0;
+            let out = `<p class="emptyCart">Корзина пуста. Добавьте товар в корзину <a href="magazine.html">
+            Магазин</a></p>`;
             $('#my-cart').html(out);
         } else {
             let out = '';
             for (let key in cart){
-                out += `<div class="goodsItem">`
+                out += `<div class="goodsItem">` 
                 out += `<button class="delete" data-art="${key}">x</button>`;
+                out += `<div class="goodsItemContainer">` 
+                out += `<div class="cartImgContainer">`
                 out += `<img id="cartImg" src="${goods[key].image}" alt=" ">`;
-                out += goods[key].name
-                out += `<button class="minus" data-art="${key}">-</button>`;
-                out += cart[key];
-                out += `<button class="plus" data-art="${key}">+</button>`;
-                out += `<span class="itemCost">${cart[key] * goods[key].cost} UAH</span>`;
                 out += `</div>`
+                out += `<div class="itemInfo">`
+                out += `<span id="itemName">${goods[key].name}</span>`
+                out += `<div class="naviButton">`
+                out += `<button class="minus" data-art="${key}">-</button>`;
+                out += `<span id="itemSum">${cart[key]}</span>`;
+                out += `<button class="plus" data-art="${key}">+</button>`;
+                out += `</div>`
+                out += `<span  class="itemSumCost">${cart[key] * goods[key].cost} UAH</span>`;
+                out += `</div>`
+                out += `</div>` 
+                out += `</div>` 
 
             }
 
@@ -39,10 +43,10 @@ $.getJSON('goods.json', function(data){
 
     function allItemCost(){
         // Считаем общую сумму по заказам
-        let amountItem = document.getElementsByClassName('itemCost').length;
+        let amountItem = document.getElementsByClassName('itemSumCost').length;
         costAllItem = 0;
         for (let i = 0; i < amountItem; i++){
-            costAllItem += parseInt(document.getElementsByClassName('itemCost')[i].innerHTML);
+            costAllItem += parseInt(document.getElementsByClassName('itemSumCost')[i].innerHTML);
         }
         if ( costAllItem !== 0 ) {
             $('#allCost').html(`<span>${costAllItem} UAH</span>`);
@@ -120,6 +124,62 @@ $(document).ready(function(){
 });
 //------------------------------------------------------------
 
+function order() {
+        //Получаем данные для отправки
+        let allItem = '';
+    let item = document.getElementsByClassName('itemInfo'); // Блок с товарами
+    for (let i = 0; i < item.length; i++) {
+        allItem += `${item[i].children[0].innerHTML}, ${item[i].children[1].children[1].innerHTML} шт = ${parseInt(item[i].children[2].innerHTML)} ----`;
+    }
+    let orderList = `<input type="text" class="hide" name="order" value="${allItem}">`;
+
+        $('#formMain').prepend(orderList);
+    
+}
+
+
+
+// Открыти по клику на кнопку
+$('.js-buttonContainer').click(function() {
+    $('main,footer, header').css('filter','blur(5px)');
+    $('.js-overlay-compaign').fadeIn();
+});
+
+//  Закрыти по клику на крестик
+$('.js-close-campaign').click(function() {
+    $('.js-overlay-compaign').fadeOut();
+    $('main,footer, header').css('filter','none');
+});
+
+//  Закрытие по клику в любом месте
+$(document).mouseup(function(e) {
+    let popup = $('.js-popup-compaign');
+    if (e.target != popup[0] && popup.has(e.target).length === 0) {
+        $('.js-overlay-compaign').fadeOut();
+        $('main,footer, header').css('filter','none');
+    }
+});
+
+
+//-----------------AJAX 
+function AjaxFormRequest(result_id,formMain,url) {
+    jQuery.ajax({
+        url:     url,
+        type:     "POST",
+        dataType: "html",
+        data: jQuery("#"+formMain).serialize(),
+});
+
+// $(':input','#formMain')
+//     .not(':button, :submit, :reset, :hidden')
+//     .val('')
+//     .removeAttr('checked')
+//     .removeAttr('selected');
+}
+
+$('#button').click(function(){
+    document.getElementById('formMain').innerHTML = `<p class="thanks">Спасибо за заказ, мы свяжемся с вами.</p>`;
+})
 
 
 

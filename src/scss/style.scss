@@ -269,9 +269,12 @@ tr th:nth-child(2){
     height: 40px;
     background-color: rgba(255, 255, 255, 0.83);
     border: 0px;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid rgba(40, 90, 97, 0.83);
     cursor: pointer;
     transition: .2s ease-in-out;
+    font-family:  'Oswald', sans-serif;
+    font-weight: 100;
+    font-size: 22px;
 
 }
 .buttonContainer:hover{
@@ -294,7 +297,11 @@ tr th:nth-child(2){
 }
 .popup{
     position: fixed;
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
     width: 300px;
+    height: 190px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -304,8 +311,8 @@ tr th:nth-child(2){
 }
 .close-popup{
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -332,17 +339,17 @@ tr th:nth-child(2){
 }
 .formInput{
     font-family: 'Oswald', sans-serif;
+    border: 1px solid transparent;
     width: 100%;
     font-weight:  100;
-    height: 29px;
-    border: 1px solid;
+    height: 25px;
     margin: 2px;
 }
 #button{
     font-family: 'Oswald', sans-serif;
     display: block;
     position: relative;
-    border: 1px solid;
+    border: 1px solid transparent;
     height: 29px;
     margin: 0 auto;
     cursor: pointer;

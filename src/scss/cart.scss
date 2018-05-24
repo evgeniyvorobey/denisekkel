@@ -103,13 +103,52 @@ body{
     font-family: 'Oswald', sans-serif;
     font-weight: 100;
 }
+main{
+    position: relative;
+    top: 340px;
+}
+.mainTitle{
+    position: relative;
+    top: -150px;
+}
+.mainTitle h1{
+    text-align: center;
+    margin: 0;
+
+}
+.h4teg{
+    position: relative;
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 100;
+}
 
 
-
-
+.cart{
+    width: 80%;
+    margin: 0 auto;
+}
+.cartTitle{
+    position: relative;
+    font-size: 20px;
+    font-weight: 100;
+    width: 140px;
+    margin: 30px auto 60px;
+    text-align: center;
+    padding: 40px 20px 5px;
+    border-bottom: 2px solid rgba(40, 90, 97, 0.83);
+    transition: .5s ease-in-out;
+}
+.cartTitle:hover{
+    width: 160px;
+}
+.emptyCart{
+    text-align: center;
+    margin: 150px 0;
+}
 #my-cart{
     display: block;
-    width: 80%;
     margin:  0 auto;
 }
 #my-cart a{
@@ -121,27 +160,159 @@ body{
     position: relative;
     padding: 10px 0;
     margin: 40px 0;
+    height: 150px;
     border-bottom: 1px solid;
 }
-.goodsItem button{
+
+.delete{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
     width: 24px;
     height: 24px;
-    border: 1px solid black;
+    cursor: pointer;
+    border: none;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.753);
-    color: rgba(128, 128, 128, 0.877);
+    background-color: transparent;
+    font-weight: 100;
 }
-.goodsItem button:nth-child(1){
-    position: absolute;
+.goodsItemContainer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20px;
+}
+.minus, .plus{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border: none;
+    font-weight: 100;
+    text-align: center;
+    background-color: transparent;
+}
+.cartImgContainer{
+    width: 120px;
+    margin-right: 10px;
 }
 #cartImg{
-    width: 90px;
+    width: 100%;
     height: auto;
+}
+.itemInfo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 20px 0 0;
 }
 #allCost{
     margin: 0 auto;
-    width: 80%;
     text-align: right;
+}
+.buttonContainer{
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.83);
+    border: 0px;
+    border-bottom: 1px solid rgba(40, 90, 97, 0.83);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    font-family:  'Oswald', sans-serif;
+    font-weight: 100;
+    font-size: 22px;
+
+}
+.buttonContainer:hover{
+    width: 150px;
+    color: #fff;
+    background-color: rgba(40, 90, 97, 0.83);
+}
+
+
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+.popup{
+    position: fixed;
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    width: 300px;
+    height: 190px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: rgba(40, 90, 97, 0.83);
+}
+.close-popup{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.close-popup::before{
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    height: 1px;
+    width: 30px;
+    top: 10px;
+    left: -5px;
+    transform: rotate(45deg);
+}
+.close-popup::after{
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    height: 1px;
+    width: 30px;
+    top: 10px;
+    left: -5px;
+    transform: rotate(-45deg)
+}
+.formInput{
+    font-family: 'Oswald', sans-serif;
+    border: 1px solid transparent;
+    width: 100%;
+    font-weight:  100;
+    height: 25px;
+    margin: 2px;
+}
+#button{
+    font-family: 'Oswald', sans-serif;
+    display: block;
+    position: relative;
+    border: 1px solid transparent;
+    height: 29px;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 100px;
+    margin: 5px auto;
+    font-weight: 100;
+    background-color: #fff;
+}
+.thanks{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.hide{
+    display: none;
 }
 
 
@@ -196,3 +367,58 @@ footer a{
 }
 
 //---------------ToTop end--------
+
+@media (min-width: 411px) {
+    body{
+        width: 410px;
+        margin: 0 auto;
+    }
+    .map{
+        width: 330px;
+        margin: 0 auto;
+    }
+    .contactItem{
+        width: 330px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    body{
+        width: 768px;
+        margin: 0 auto;;
+    }
+    .menu{
+        position: relative;
+        top: 15px;
+        text-align: center;
+    }
+    .goodsItemContainer{
+        flex-direction: row;
+    }
+    .cartImgContainer{
+        margin-right: 50px;
+    }
+    .itemInfo{
+        width: 100%;
+    }
+    .contacts{
+        display: flex;
+    }
+    .contactItem{
+        padding: 0 0 0 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 1024px){
+    body{
+        width: 1024px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body{
+        width: 1200px;
+    }
+}

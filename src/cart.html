@@ -29,9 +29,27 @@
         </nav>
     </header>
     <main>
-         <div id="my-cart"></div>
-         <div id="allCost"></div>
+        <div class="mainTitle">
+            <h1>DENIS EKKEL</h1>
+            <h4 class="h4teg">HAIR COUTURE</h4>
+        </div>
+        <div class="cart">
+            <h2 class="cartTitle">Корзина</h2>
+            <div id="my-cart"></div>
+            <div id="allCost"></div>
+            <button class="buttonContainer js-buttonContainer" onclick="order()">Оформить</button>
+        </div>
     </main>
+    <div class="overlay js-overlay-compaign">
+            <div id="result_id" class="popup js-popup-compaign">
+                <form  method="post" action="" id="formMain" name="formMain">
+                    <input class="formInput" id="name" type="text" name="name" placeholder="Введите ваше имя"autocomplete="on" required/>
+                    <input class="formInput" type="text" name="phone" placeholder="Телефон"autocomplete="on" required/>
+                    <input id="button" type="button" name="button" value="Заказать" onclick="AjaxFormRequest('messegeResult', 'formMain', 'order.php')">
+                </form>
+                <div class="close-popup js-close-campaign"></div>
+            </div>
+    </div>
     <footer>
             <div class="contacts">
                 <div class="map"><a href="http://google.com">

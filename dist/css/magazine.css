@@ -170,6 +170,14 @@ main {
 	text-align: center;
 }
 
+.single-goods h3 {
+	font-weight: 100;
+}
+
+.single-goods h4 {
+	font-weight: 100;
+}
+
 .single-goods img {
 	width: 100%;
 	height: auto;
@@ -186,6 +194,8 @@ main {
 	height: 30px;
 	border-radius: 0;
 	border: 1px solid rgba(40, 90, 97, 0.83);
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
 }
 
 .byButton:hover {
@@ -295,65 +305,6 @@ body {
 
 body {
 	width: 1024px;
-}
-
-.galaryContainer {
-	-webkit-box-pack: space-evenly;
-	-ms-flex-pack: space-evenly;
-	justify-content: space-evenly;
-}
-
-.aboutGalary {
-	font-size: 18px;
-}
-
-.slider {
-	width: 450px;
-}
-
-.eduContainer {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-.education img {
-	width: 55%;
-	height: 100%;
-}
-
-.eduFirst {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 0  20px 20px 20px;
-}
-
-.eduFirst h3 {
-	margin: 0;
-	padding: 0;
-}
-
-.masterClassContainer {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-.masterClassContainer img {
-	width: 55%;
-	height: 100%;
-}
-
-.masterClassOption {
-	width: 50%;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 0 20px 20px 20px;
-}
-
-.masterClassOptionOne h3 {
-	margin: 0;
-	padding: 0 0 25px 0;
 }
 
 }

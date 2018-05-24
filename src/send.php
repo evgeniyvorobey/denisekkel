@@ -1,31 +1,19 @@
 <?php
 
-if(isset($_POST['name'])){$name = $_POST['name'];}
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$token = "573400169:AAHG-frOs-mj14pDiSNnDkrQVgy9_zdycpk";
+$chat_id = "-238405256";
+$arr = array(
+    'Имя: ' => $name,
+    'Телефон: ' => $phone,
+);
 
-if(isset($_POST['tel'])){$tel = $_POST['tel'];}
+foreach($arr as $key => $value) {
+    $txt .= "<b>".$key."</b> ".$value."%0A";
+};
 
-$to = "<адрес почты для получения заявок с сайта>"  ; 
-$subject = "Заявка на заказ звонка менеджера"; 
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
-$msg = "Тип заявки: {$subject}\nИмя: {$name}\nТелефон: {$tel}";
 
-$token='573400169:AAHG-frOs-mj14pDiSNnDkrQVgy9_zdycpk';
-$query = [
-    'chat_id' => -238405256,
-    'parse_mode' => 'HTML',
-    'text' => $msg
-];
-
-$headers = "MIME-Version: 1.0\r\n";
-$headers .= "Content-type: text/plain; charset=utf-8\r\n";
-$headers .= "From: mail@mail.com\r\n";
-
-if($name and $tel){
-	
-	mail($to, $subject, $msg, $headers);
-					
-	file_get_contents(sprintf('https://api.telegram.org/bot%s/sendMessage?%s', $token, http_build_query($query)
-	));
-	
-}
 ?>

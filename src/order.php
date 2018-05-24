@@ -1,10 +1,12 @@
 <?php
 
+$order = $_POST['order'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $token = "573400169:AAHG-frOs-mj14pDiSNnDkrQVgy9_zdycpk";
 $chat_id = "-238405256";
 $arr = array(
+    'Заказ' => $order,
     'Имя: ' => $name,
     'Телефон: ' => $phone,
 );
