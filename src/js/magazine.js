@@ -11,14 +11,19 @@ function loadGoods() {
     $.getJSON('goods.json', function (data) {
         let out = "";
         for (let key in data){
-            out+= '<div class="single-goods">';
-            out+= '<h3>' +data[key]['name']+'</h3>';
-            out+= '<p>Цена: ' +data[key]['cost']+'</p>';
-            out+= '<img src="'+data[key].image+'">';
-            out+= '<h4> Описание: </h4>'
-            out+= '<p>' +data[key]['description']+'</p>'
-            out+= '<button data-art="'+key+'" class="byButton">Купить</button>'
-            out+= '</div>'
+            out += `<div class="single-goods">`
+            out += `<div class="goodsMain">`;
+            out += `<h3>${data[key].name}</h3>`;
+            out += `<p>Цена: ${data[key].cost}</p>`;
+            out += `<img src="${data[key].image}">`;
+            out += `<h4> Описание: </h4>`
+            out += `<p>${data[key].description}</p>`
+            out += `<button data-art="${key}" class="byButton">Купить</button>`
+            out += `</div>`
+            out += `<div id="goodsInfo">`
+            out += `<p>${data[key].largeDescription} ${key}</p>`
+            out += `</div>`
+            out += `</div>`
         }
         $('#goods').html(out);
         $('button.byButton').on('click', addToCart);

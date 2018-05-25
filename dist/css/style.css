@@ -316,19 +316,20 @@ tr th:nth-child(2) {
 	margin: 0 auto;
 	width: 120px;
 	height: 40px;
-	background-color: rgba(255, 255, 255, 0.83);
-	border: 0px;
-	border-bottom: 1px solid rgba(40, 90, 97, 0.83);
-	cursor: pointer;
-	-webkit-transition: .2s ease-in-out;
-	transition: .2s ease-in-out;
+	margin: 15px auto;
+	background-color: white;
+	text-decoration: none;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 100;
 	font-size: 22px;
+	cursor: pointer;
+	border-radius: 0;
+	border: 1px solid rgba(40, 90, 97, 0.83);
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
 }
 
 .buttonContainer:hover {
-	width: 150px;
 	color: #fff;
 	background-color: rgba(40, 90, 97, 0.83);
 }
@@ -421,6 +422,14 @@ tr th:nth-child(2) {
 	margin: 5px auto;
 	font-weight: 100;
 	background-color: #fff;
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+#button:hover {
+	background-color: rgba(40, 90, 97, 0);
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.322);
 }
 
 .thanks {
@@ -547,6 +556,22 @@ body {
 .contactItem {
 	width: 330px;
 	margin: 0 auto;
+}
+
+}
+
+@media (min-width: 667px) {
+
+body {
+	width: 665px;
+}
+
+}
+
+@media (min-width: 736px) {
+
+body {
+	width: 735px;
 }
 
 }

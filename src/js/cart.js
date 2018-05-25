@@ -10,6 +10,8 @@ $.getJSON('goods.json', function(data){
             let out = `<p class="emptyCart">Корзина пуста. Добавьте товар в корзину <a href="magazine.html">
             Магазин</a></p>`;
             $('#my-cart').html(out);
+            // удаляем кнопку оформить
+            $('.buttonContainer').css('display', 'none');
         } else {
             let out = '';
             for (let key in cart){
@@ -162,24 +164,22 @@ $(document).mouseup(function(e) {
 
 
 //-----------------AJAX 
-function AjaxFormRequest(result_id,formMain,url) {
-    jQuery.ajax({
-        url:     url,
-        type:     "POST",
-        dataType: "html",
-        data: jQuery("#"+formMain).serialize(),
-});
-
-// $(':input','#formMain')
-//     .not(':button, :submit, :reset, :hidden')
-//     .val('')
-//     .removeAttr('checked')
-//     .removeAttr('selected');
-}
-
-$('#button').click(function(){
+function AjaxFormRequest(formMain) {
+    name = document.getElementById('name').value;
+    phone = document.getElementById('phone').value;
+    if ( name.length >= 2 && phone.length >= 9) {
+        jQuery.ajax({
+            url:     "order.php",
+            type:     "POST",
+            dataType: "html",
+            data: jQuery("#"+formMain).serialize(),
+    });
     document.getElementById('formMain').innerHTML = `<p class="thanks">Спасибо за заказ, мы свяжемся с вами.</p>`;
-})
+    } else {
+        document.getElementById('name').placeholder = 'Заполните поле';
+        document.getElementById('phone').placeholder  = 'Заполните поле';
+    }
+}
 
 
 

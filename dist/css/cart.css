@@ -118,7 +118,7 @@ main {
 
 .cart {
 	width: 80%;
-	margin: 0 auto;
+	margin: 0 auto 250px;
 }
 
 .cartTitle {
@@ -126,7 +126,7 @@ main {
 	font-size: 20px;
 	font-weight: 100;
 	width: 140px;
-	margin: 30px auto 60px;
+	margin: 30px auto 150px;
 	text-align: center;
 	padding: 40px 20px 5px;
 	border-bottom: 2px solid rgba(40, 90, 97, 0.83);
@@ -222,30 +222,30 @@ main {
 }
 
 #allCost {
-	margin: 0 auto;
+	margin: 0 auto 80px;
 	text-align: right;
 }
 
 .buttonContainer {
-	display: block;
-	margin: 0 auto;
+	position: absolute;
+	right: 10%;
 	width: 120px;
 	height: 40px;
-	background-color: rgba(255, 255, 255, 0.83);
-	border: 0px;
-	border-bottom: 1px solid rgba(40, 90, 97, 0.83);
-	cursor: pointer;
-	-webkit-transition: .2s ease-in-out;
-	transition: .2s ease-in-out;
+	margin: 15px auto;
+	background-color: white;
+	text-decoration: none;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 100;
-	font-size: 22px;
+	cursor: pointer;
+	border-radius: 0;
+	border: 1px solid rgba(40, 90, 97, 0.83);
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
 }
 
 .buttonContainer:hover {
-	width: 150px;
-	color: #fff;
 	background-color: rgba(40, 90, 97, 0.83);
+	color: white;
 }
 
 .overlay {
@@ -336,6 +336,14 @@ main {
 	margin: 5px auto;
 	font-weight: 100;
 	background-color: #fff;
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+#button:hover {
+	background-color: rgba(40, 90, 97, 0);
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.322);
 }
 
 .thanks {
