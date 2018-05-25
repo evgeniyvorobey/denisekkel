@@ -126,7 +126,7 @@ main{
 
 .magazine{
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 100px;
 }
 .magazineTitle{
     position: relative;
@@ -182,6 +182,10 @@ main{
 .single-goods img{
     width: 100%;
     height: auto;
+    transition: .2s ease-in-out;
+}
+.single-goods img:hover{
+    opacity: 0.8;
 }
 .byButton{
     margin: 15px auto;
@@ -214,10 +218,13 @@ main{
     height: 100%;
     box-sizing: border-box;
     display: none;
-    transition: .1s ease-in-out;
+    opacity: 0;
+    transition: .3s ease-in-out;
 }
 #goodsInfo.show{
+    transition: .3s ease-in-out;
     display: flex;
+    opacity: 1;
 }
 
 

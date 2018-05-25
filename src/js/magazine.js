@@ -87,3 +87,26 @@ $(document).ready(function(){
         });
     })(jQuery);
 });
+
+
+
+
+
+// // отслеживание по какому элементу произошел клик
+// let goodsClick = document.getElementById('goods');
+
+// goodsClick.onclick = function(event) {
+//     let target = event.target;
+
+//     let img = target.closest('img');
+//     if (!img) {
+//         return;
+//     } else {
+//         let goodsInfo = img.parentElement.nextElementSibling;
+//         goodsInfo.classList.add('show');
+//     }
+//     console.log(img);
+// }
+
+// let show = document.getElementById('goodsInfo');
+
