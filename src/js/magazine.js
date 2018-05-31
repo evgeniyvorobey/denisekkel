@@ -21,7 +21,7 @@ function loadGoods() {
             out += `<button data-art="${key}" class="byButton">Купить</button>`
             out += `</div>`
             out += `<div id="goodsInfo">`
-            out += `<p>${data[key].largeDescription} ${key}</p>`
+            out += `<p>${data[key].largeDescription}</p>`
             out += `</div>`
             out += `</div>`
         }
@@ -92,21 +92,22 @@ $(document).ready(function(){
 
 
 
-// // отслеживание по какому элементу произошел клик
-// let goodsClick = document.getElementById('goods');
+// отслеживание по какому элементу произошел клик
+let goodsClick = document.getElementById('goods');
 
-// goodsClick.onclick = function(event) {
-//     let target = event.target;
 
-//     let img = target.closest('img');
-//     if (!img) {
-//         return;
-//     } else {
-//         let goodsInfo = img.parentElement.nextElementSibling;
-//         goodsInfo.classList.add('show');
-//     }
-//     console.log(img);
-// }
+goodsClick.onclick = function(event) {
+    let target = event.target;
 
-// let show = document.getElementById('goodsInfo');
+        let img = target.closest('img');
+        let div = target.closest('#goodsInfo');
+        if (img) {
+            let goodsInfo = img.parentElement.nextElementSibling;
+            goodsInfo.classList.add('show');
+        } else if (div) {
+            div.classList.remove('show');
+        } else {
+            return;
+        }
+}
 
