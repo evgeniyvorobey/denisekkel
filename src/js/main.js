@@ -1,5 +1,3 @@
-autoSlider();
-
 
 $(document).ready(function(){
     $("#menu, #toTop").on("click","a", function (event) {
@@ -128,38 +126,35 @@ $(window).scroll(function() {
 
 
 //----------Слайдер------------//
-let left = 0;
-let slider = document.getElementsByClassName('slider');
-let sliderWidth = slider[0].offsetWidth;
-let sliderHeight = sliderWidth + sliderWidth / 3;
-let sliderContainer = document.getElementsByClassName('sliderContainer');
-
-slider[0].style.height = sliderHeight + "px"
 
 
-function autoSlider() {
-    timer = this.timer;
-    timer = setTimeout(function(){
-        left = left - sliderWidth;
-        width = sliderWidth * sliderContainer[0].childElementCount;
-        if (left < -(sliderWidth * (sliderContainer[0].childElementCount - 1))) {
-            left = 0;
-            clearTimeout(timer)
-        }
-        sliderContainer[0].style.left = left  + "px";
-        autoSlider();
-    },450)
+var sliderContainer = document.getElementsByClassName('slider')[0];
+var sliderWidth = 0;
+sliderContainer.style.height = parseInt((sliderWidth / 3) * 4) + 'px'
+
+var slides = document.querySelectorAll('.slide');
+var currentSlide = 0;
+
+var sliderInterval = setInterval(nextSlide, 500);
+
+function nextSlide() {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide + 1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+
+    //   Длина блока слайдера
+    sliderWidth = sliderContainer.offsetWidth;
+    sliderContainer.style.height = parseInt((sliderWidth / 3) * 4) + 'px';
 }
 
 
-
-// Открыти по клику на кнопку
+// Открытие по клику на кнопку
 $('.js-buttonContainer').click(function() {
     $('main,footer, header').css('filter','blur(5px)');
     $('.js-overlay-compaign').fadeIn();
 });
 
-//  Закрыти по клику на крестик
+//  Закрытие по клику на крестик
 $('.js-close-campaign').click(function() {
     $('.js-overlay-compaign').fadeOut();
     $('main,footer, header').css('filter','none');

@@ -144,6 +144,10 @@ main {
 	height: 30px;
 }
 
+.cartItem {
+	font-weight: 500;
+}
+
 .cart {
 	position: absolute;
 	right: 10%;
@@ -168,10 +172,16 @@ main {
 	position: relative;
 	width: 110px;
 	margin: 5px 0px;
-	border: 1px solid rgba(40, 90, 97, 0.83);
+	border: 2px solid transparent;
 	padding: 5px;
 	text-align: center;
 	overflow: hidden;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.single-goods:hover {
+	border: 2px solid rgba(40, 90, 97, 0.83);
 }
 
 .single-goods h3 {
@@ -190,7 +200,8 @@ main {
 }
 
 .single-goods img:hover {
-	opacity: 0.8;
+	-webkit-transform: scale(0.95);
+	transform: scale(0.95);
 }
 
 .byButton {

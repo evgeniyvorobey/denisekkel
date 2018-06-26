@@ -58,7 +58,7 @@ function showMiniCart(){
         cartItem += cart[i];
     }
     if (cartItem !== 0) {
-        out += `<a class="cart" href="cart.html">В корзине ${cartItem} товар(ов)</a>`;
+        out += `<a class="cart" href="cart.html">В корзине <span class="cartItem">${cartItem}</span> товар(ов) </a>`;
     } else {
         out += `<a class="cart" href="cart.html">Корзина пуста</a>`;
     }

@@ -220,7 +220,17 @@ ul, li{
     left: 0;
     top: 0;
 }
-.sliderContainer img{
+.slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    // transition: .5s ease-in-out;
+}
+.showing{
+    opacity: 1;
+}
+.slide img{
     width: 100%;
     height: 100%;
 }
@@ -353,6 +363,7 @@ tr th:nth-child(2){
     font-weight:  100;
     height: 25px;
     margin: 2px;
+    border-radius: 0;
 }
 #button{
     font-family: 'Oswald', sans-serif;
