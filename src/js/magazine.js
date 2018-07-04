@@ -24,8 +24,6 @@ function loadGoods() {
             out += `<p>${data[key].largeDescription}</p>`
             out += `</div>`
             out += `</div>`
-            console.log(data[key].cost,' UAH')
-
         }
         $('#goods').html(out);
         $('button.byButton').on('click', addToCart);
