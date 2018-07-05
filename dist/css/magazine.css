@@ -2,6 +2,10 @@
 	text-align: right;
 }
 
+body button {
+	outline: none;
+}
+
 .menu-item {
 	display: inline-block;
 	color: #333333;
@@ -171,6 +175,7 @@ main {
 .single-goods {
 	position: relative;
 	width: 110px;
+	height: 350px;
 	margin: 5px 0px;
 	border: 2px solid transparent;
 	padding: 5px;
@@ -182,6 +187,7 @@ main {
 
 .single-goods:hover {
 	border: 2px solid rgba(40, 90, 97, 0.83);
+	border-radius: 1px;
 }
 
 .single-goods h3 {
@@ -204,7 +210,22 @@ main {
 	transform: scale(0.95);
 }
 
+.goodsMainDescription {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 75px;
+}
+
+.goodsMainAbout {
+	position: absolute;
+	bottom: 45px;
+}
+
 .byButton {
+	position: absolute;
+	left: calc(50% - 50px);
+	bottom: 0;
 	margin: 15px auto;
 	background-color: white;
 	text-decoration: none;
@@ -225,7 +246,8 @@ main {
 }
 
 #goodsInfo {
-	position: absolute;
+	z-index: 10;
+	position: fixed;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -236,13 +258,14 @@ main {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	top: 0;
-	left: -100%;
+	top: 15%;
+	left: 5%;
+	display: none;
 	background-color: rgba(40, 90, 97, 0.9);
 	color: #fff;
 	padding: 15px;
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	height: 70%;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-transition: .1s ease-in-out;
@@ -250,7 +273,7 @@ main {
 }
 
 #goodsInfo.show {
-	left: 0;
+	display: block;
 }
 
 footer {
@@ -343,6 +366,10 @@ body {
 	margin: 0 auto;
 }
 
+.menu-item {
+	font-size: 15px;
+}
+
 .menu {
 	position: relative;
 	top: 15px;
@@ -371,6 +398,22 @@ body {
 
 body {
 	width: 1024px;
+}
+
+.menu {
+	top: 30px;
+}
+
+.links {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+
+.menu-item {
+	font-size: 17px;
 }
 
 }

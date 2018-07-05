@@ -2,6 +2,10 @@
 	text-align: right;
 }
 
+body button {
+	outline: none;
+}
+
 .menu-item {
 	display: inline-block;
 	color: #333333;
@@ -170,6 +174,7 @@ main {
 	margin: 0;
 	width: 24px;
 	height: 24px;
+	font-style: 22px;
 	cursor: pointer;
 	border: none;
 	text-align: center;
@@ -441,6 +446,10 @@ body {
 	text-align: center;
 }
 
+.menu-item {
+	font-size: 15px;
+}
+
 .goodsItemContainer {
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
@@ -474,6 +483,22 @@ body {
 
 body {
 	width: 1024px;
+}
+
+.menu {
+	top: 30px;
+}
+
+.links {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+
+.menu-item {
+	font-size: 17px;
 }
 
 }

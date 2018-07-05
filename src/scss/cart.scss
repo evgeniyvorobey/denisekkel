@@ -1,6 +1,9 @@
 .menu{
     text-align: right;
 }
+body button{
+    outline: none;
+}
 .menu-item{
     display: inline-block;
     color: #333333;
@@ -172,6 +175,7 @@ main{
     margin: 0;
     width: 24px;
     height: 24px;
+    font-style: 22px;
     cursor: pointer;
     border: none;
     text-align: center;
@@ -399,6 +403,9 @@ footer a{
         top: 15px;
         text-align: center;
     }
+    .menu-item{
+        font-size: 15px;
+    }
     .goodsItemContainer{
         flex-direction: row;
     }
@@ -420,6 +427,16 @@ footer a{
 @media (min-width: 1024px){
     body{
         width: 1024px;
+    }
+    .menu{
+        top: 30px;
+    }
+    .links{
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-item{
+        font-size: 17px;
     }
 }
 

@@ -16,8 +16,8 @@ function loadGoods() {
             out += `<h3>${data[key].name}</h3>`;
             out += `<p>Цена: ${data[key].cost}</p>`;
             out += `<img src="${data[key].image}">`;
-            out += `<h4> Описание: </h4>`
-            out += `<p>${data[key].description}</p>`
+            out += `<h4 class="goodsMainDescription"> Описание: </h4>`
+            out += `<p class="goodsMainAbout">${data[key].description}</p>`
             out += `<button data-art="${key}" class="byButton">Купить</button>`
             out += `</div>`
             out += `<div id="goodsInfo">`
@@ -110,4 +110,6 @@ goodsClick.onclick = function(event) {
             return;
         }
 }
+
+
 
